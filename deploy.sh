@@ -41,9 +41,6 @@ if [ ! -z $BINDERHUB_CONTAINER_MODE ] ; then
     fi
   done
 
-  # Set path of key file
-  SERVICE_ACCOUNT_KEYFILE="${DIR}/${SERVICE_ACCOUNT_KEYFILE}"
-
   echo "--> Configuration parsed from blue button:
     GCP_PROJECT: ${GCP_PROJECT}
     BINDERHUB_NAME: ${BINDERHUB_NAME}
@@ -109,7 +106,7 @@ else
   if [ x${DOCKER_PASSWORD} == 'xnull' ] ; then DOCKER_PASSWORD='' ; fi
   if [ x${DOCKER_ORGANISATION} == 'xnull' ] ; then DOCKER_ORGANISATION='' ; fi
 
-  # Normalise resource group location to remove spaces and have lowercase
+  # Normalise zone to remove spaces and have lowercase
   GCP_ZONE=`echo ${GCP_ZONE//[[:blank:]]/} | tr '[:upper:]' '[:lower:]'`
 
   echo "--> Configuration read in:
