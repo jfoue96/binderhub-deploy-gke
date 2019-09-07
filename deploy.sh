@@ -33,6 +33,7 @@ if [ ! -z $BINDERHUB_CONTAINER_MODE ] ; then
           DOCKER_PASSWORD \
           DOCKER_IMAGE_PREFIX \
           DOCKER_ORGANISATION \
+          GCP_ZONE \
           "
   for required_var in $REQUIREDVARS ; do
     if [ -z "${!required_var}" ] ; then
