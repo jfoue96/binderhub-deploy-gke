@@ -1,0 +1,52 @@
+{
+    "name": "binderhub-deploy-gke",
+    "env": {
+        "SERVICE_ACCOUNT": {
+            "description": "Google Cloud Service Account",
+            "required": true
+        },
+        "SERVICE_ACCOUNT_KEYFILE": {
+            "description": "Path to Google Cloud Service Account Key File",
+            "required": true
+        },
+        "GCP_PROJECT": {
+            "description": "Google Cloud project",
+            "required": true
+        },
+        "BINDERHUB_NAME": {
+            "description": "Name of your BinderHub deployment",
+            "required": true
+        },
+        "BINDERHUB_VERSION": {
+            "description": "Helm chart version to deploy, should be 0.2.0-<commit-hash>",
+            "required": true
+        },
+        "NODE_COUNT": {
+            "description": "Number of nodes to deploy",
+            "value": "3",
+            "required": true
+        },
+        "NODE_MACHINE_TYPE": {
+            "description": "Type of machine to deploy",
+            "value": "n1-standard-1",
+            "required": true
+        },
+        "DOCKER_USERNAME": {
+            "description": "Docker username",
+            "required": true
+        },
+        "DOCKER_IMAGE_PREFIX": {
+            "description": "The prefix to preprend to Docker images (e.g. 'binder-prod')",
+            "required": true
+        },
+        "DOCKER_ORGANISATION": {
+            "description": "A Docker Hub organisation to push images to (optional)",
+            "value": "null",
+            "required": false
+        },
+        "GCP_ZONE": {
+            "description": "Google Cloud zone to deploy to",
+            "required": true
+        }
+    }
+}
