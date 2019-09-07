@@ -17,7 +17,7 @@ This repo is based on the following set of deployment scripts for Google Cloud: 
   - [`info.sh`](#infosh)
   - [`upgrade.sh`](#upgradesh)
   - [`teardown.sh`](#teardownsh)
-- [Running the Container Locally](#Running-the-Container-Locally)
+- [Run on Google Cloud](#run-on-google-cloud)
 - [Customising your BinderHub Deployment](#customising-your-binderhub-deployment)
 - [Contributors](#contributors)
 
@@ -25,7 +25,7 @@ This repo is based on the following set of deployment scripts for Google Cloud: 
 
 ## Usage
 
-This repo can be run locally, by pulling and executing the container image, or as "Platform as a Service" through the "Cloud Run" button in the ["Cloud Run" Button](#cloud-run-button) section.
+This repo can be run locally, by pulling and executing the container image, or as "Platform as a Service" through the button in the [Run of Google Cloud](#run-on-google-cloud) section.
 
 To use these scripts locally, clone this repo and change into the directory.
 
@@ -133,6 +133,10 @@ It reads the BinderHub name and Helm Chart version from `config.json`.
 This script will purge the Helm Chart release, delete the Kubernetes namespace and then delete the Google Cloud cluster.
 It will read the namespaces from `config.json`.
 The user should check the [Google Cloud Console](https://console.cloud.google.com/) to verify the resources have been deleted.
+
+## Run on Google Cloud
+
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=YOUR_HTTP_GIT_URL)
 
 ## Customising your BinderHub Deployment
 
