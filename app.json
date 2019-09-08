@@ -51,6 +51,10 @@
             "description": "A Docker Hub organisation to push images to (optional)",
             "value": "null",
             "required": false
+        },
+        "BINDERHUB_CONTAINER_MODE": {
+            "description": "",
+            "value": "true"
         }
     }
 }
